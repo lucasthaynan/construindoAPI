@@ -8,7 +8,7 @@ print('1. Bibliotecas Importadas')
 
 # tokens
 TOKEN_API_FUTEBOL = 'test_c961e301def7b699c92963a17ac1db'
-TOKEN_GITHUB = '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'
+TOKEN_GITHUB = ''
 
 print('2. Tokens carregados')
 
