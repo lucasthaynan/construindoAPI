@@ -1,6 +1,6 @@
 
 
-import pandas as pd
+
 from github import Github
 import json
 import requests
