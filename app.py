@@ -3,6 +3,8 @@
 from github import Github
 import json
 import requests
+from datetime import datetime, timedelta
+
 
 print('1. Bibliotecas Importadas')
 
@@ -46,19 +48,22 @@ tabela_json = json.dumps(tabela) # converte em json
 
 print('4. Dados convertidos para json')
 
+current_time = datetime.now()    
+f_data = current_time.strftime("%Y-%m-%dT%H:%M:%S.%fZ")
 
+print("formated date: "+str(f_data))
 # ATUALIZANDO ARQUIVO JSON NO GITHUB
 
-g = Github(TOKEN_GITHUB) 
+# g = Github(TOKEN_GITHUB) 
 
-# repositorio
-repo = g.get_repo("lucasthaynan/construindoAPI")
+# # repositorio
+# repo = g.get_repo("lucasthaynan/construindoAPI")
 
-# local do arquivo no repositorio
-contents = repo.get_contents("/api_teste.json")
+# # local do arquivo no repositorio
+# contents = repo.get_contents("/api_teste.json")
 
-# atualizando arquivo 
-repo.update_file(contents.path, 'Dados atualizados', tabela_json, contents.sha, branch="main")
-print('5. Arquivo atualizado no GitHub')
+# # atualizando arquivo 
+# repo.update_file(contents.path, 'Dados atualizados', tabela_json, contents.sha, branch="main")
+# print('5. Arquivo atualizado no GitHub')
 
-print('--- FIM ---')
+# print('--- FIM ---')
